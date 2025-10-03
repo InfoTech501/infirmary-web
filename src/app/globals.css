@@ -21,8 +21,6 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  /* font-family: "Lexend", Helvetica, sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap'); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,7 +33,6 @@ body {
   scroll-behavior: smooth;
   }
 }
-
 
 a {
   color: inherit;
@@ -54,14 +51,6 @@ a {
   }
 }
 
-@font-face {
-  font-family: "Lexend", sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;  
-}
-
 h2 {
-  font-family: 'Lexend', sans-serif; /* Apply the custom font */
+  font-family: 'Lexend', sans-serif;
 }
