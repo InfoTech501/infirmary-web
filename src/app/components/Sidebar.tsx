@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import {PieChart, UserCog2Icon, LucideBellRing} from 'lucide-react'
 
-const Sidebar = () => {
+export function Sidebar() {
   return (
     <div className="lg:flex">
       <aside className="w-60 h-screen fixed top-0 left-0 bg-white p-4 shadow-md z-10 drop-shadow-2xl">
@@ -26,5 +26,3 @@ const Sidebar = () => {
     </div>
   )
 }
-
-export default Sidebar
