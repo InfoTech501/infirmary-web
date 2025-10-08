@@ -13,6 +13,12 @@ const formattedDate = currentDate.toLocaleDateString('en-Ph', {
     day: 'numeric',
 });
 
+const adviser = {
+      name: "Mrs. Jean C. Dela Cruz",
+      grade: 9,
+      section: "Gumamela"
+};
+
 export default function Home() {
   return (
     <main>
@@ -26,10 +32,10 @@ export default function Home() {
             </h2>
 
             <h2 className="text-gray-950 text-2xl font-semibold mt-2">
-              Mrs. Jean C. Dela Cruz
+              {adviser.name}
             </h2>
 
-            <p className="text-gray-950 text-sm mt-1">Adviser of Grade 9 Section name</p>
+            <p className="text-gray-950 text-sm mt-1">Adviser of Grade {adviser.grade} {adviser.section} </p>
           </div>
 
           <div className="text-right pr-6">
