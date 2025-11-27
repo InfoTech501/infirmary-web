@@ -13,7 +13,7 @@ interface Student {
   adviser: string | null;
 }
 
-export const mockStudentsHealthProfile: Student[] = [
+const mockStudentsHealthProfile: Student[] = [
   {
     studentId: 1,
     fullName: "John Doe",
@@ -84,11 +84,7 @@ export default function StudentsHealthProfilePage() {
     <div className="w-full px-10 py-8 text-black text-sm">
       <h1 className="text-3xl font-bold mb-8">Students Health Profile</h1>
 
-      <SearchBar
-        value={search}
-        onChange={setSearch}
-        placeholder="Search student..."
-      />
+      <SearchBar value={search} onChange={setSearch} placeholder="Search student..." />
 
       <div className="w-full overflow-hidden">
         <table className="w-full text-black border-collapse">
