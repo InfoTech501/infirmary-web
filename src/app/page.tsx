@@ -1,22 +1,22 @@
 import React from "react";
-import {StudentListTable} from "./components/StudentListTable";
-import { Header } from "./components/Header";
-import { Sidebar } from "./components/Sidebar";
+import { StudentListTable } from "../components/StudentListTable";
+import { Header } from "../components/Header";
+import { Sidebar } from "../components/Sidebar";
 import { ChartNoAxesCombinedIcon } from "lucide-react";
 
 const currentDate = new Date();
 
-const formattedDate = currentDate.toLocaleDateString('en-Ph', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+const formattedDate = currentDate.toLocaleDateString("en-Ph", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
 });
 
 const adviser = {
-      name: "Mrs. Jean C. Dela Cruz",
-      grade: 9,
-      section: "Gumamela"
+  name: "Mrs. Jean C. Dela Cruz",
+  grade: 9,
+  section: "Gumamela",
 };
 
 export default function Home() {
@@ -35,11 +35,13 @@ export default function Home() {
               {adviser.name}
             </h2>
 
-            <p className="text-gray-950 text-sm mt-1">Adviser of Grade {adviser.grade} {adviser.section} </p>
+            <p className="text-gray-950 text-sm mt-1">
+              Adviser of Grade {adviser.grade} {adviser.section}{" "}
+            </p>
           </div>
 
           <div className="text-right pr-6">
-              <p className="text-gray-950 text-lg font-normal">{formattedDate}</p>
+            <p className="text-gray-950 text-lg font-normal">{formattedDate}</p>
           </div>
         </div>
 
@@ -63,11 +65,13 @@ export default function Home() {
           </section>
 
           <section className="class-table-lists flex-1">
-            <h3 className="text-gray-950 font-semibold mb-3">List of students</h3>
+            <h3 className="text-gray-950 font-semibold mb-3">
+              List of students
+            </h3>
             <StudentListTable />
           </section>
         </div>
-        </div>
-      </main>
+      </div>
+    </main>
   );
 }
