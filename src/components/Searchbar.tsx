@@ -1,6 +1,6 @@
 "use client";
 
-import { SlidersHorizontal } from "lucide-react";
+import { Filter } from "lucide-react";
 
 interface SearchBarProps {
   value: string;
@@ -15,8 +15,9 @@ export default function SearchBar({
 }: SearchBarProps) {
   return (
     <div className="flex items-center gap-4 mb-6">
+
       <div className="flex items-center gap-2">
-        <SlidersHorizontal className="h-5 w-5" />
+        <Filter className="h-5 w-5" />
         <span className="font-medium text-xl">Filter List</span>
       </div>
 
