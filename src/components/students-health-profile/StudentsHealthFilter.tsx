@@ -3,7 +3,14 @@
 import { useState } from "react";
 import Searchbar from "@/components/students-health-profile/Searchbar";
 
-export default function StudentsHealthFilterUI() {
+const sections = [
+  { section: "Gumamela" },
+  { section: "Santan" },
+  { section: "Rosal" },
+  { section: "Jasmine" },
+];
+
+export default function StudentsHealthFilter() {
   const [section, setSection] = useState("");
   const [sex, setSex] = useState("");
   const [search, setSearch] = useState("");
@@ -31,10 +38,12 @@ export default function StudentsHealthFilterUI() {
           className="border border-gray-300 px-4 py-2 rounded-lg bg-white hover:bg-gray-100 cursor-pointer"
         >
           <option value="">Section</option>
-          <option value="Gumamela">Gumamela</option>
-          <option value="Santan">Santan</option>
-          <option value="Rosal">Rosal</option>
-          <option value="Jasmine">Jasmine</option>
+
+          {sections.map((item) => (
+            <option key={item.section} value={item.section}>
+              {item.section}
+            </option>
+          ))}
         </select>
 
         <select
@@ -50,12 +59,15 @@ export default function StudentsHealthFilterUI() {
         <button className="border border-gray-300 px-4 py-2 rounded-lg bg-white hover:bg-gray-200 cursor-pointer">
           Age
         </button>
+
         <button className="border border-gray-300 px-4 py-2 rounded-lg bg-white hover:bg-gray-200 cursor-pointer">
           A - Z
         </button>
+
         <button className="border border-gray-300 px-4 py-2 rounded-lg bg-white hover:bg-gray-200 cursor-pointer">
           Z - A
         </button>
+
         <button
           onClick={clearFilters}
           className="border border-gray-300 px-4 py-2 rounded-lg bg-white hover:bg-gray-200 cursor-pointer"
