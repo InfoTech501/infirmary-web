@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { StudentListTable } from "./components/StudentListTable";
-import { ClinicVisitModal } from "./components/ClinicVisitModal";
+import { StudentListTable } from "@/app/components/StudentListTable";
+import { ClinicVisitModal } from "@/app/components/modal/ClinicVisitModal";
 
 export default function StudentHealthProfile() {
   const [showModal, setShowModal] = useState(false);
