@@ -1,5 +1,4 @@
 import React from "react";
-import "@/app/styles/student.health.profile.css";
 import { Sidebar } from "@/app/components/Sidebar";
 import { StudentHealthProfileHeader } from "@/app/components/StudentHealthProfileHeader";
 import { StudentHealthProfile } from "@/app/components/StudentHealthProfile";
@@ -9,14 +8,12 @@ export default function Page() {
     <>
       <StudentHealthProfileHeader />
 
-      <div className="main-content bg-gray-50 min-h-screen">
+      <div className="layout-container bg-white-50 min-h-screen flex">
         <Sidebar />
 
-        <main>
-          <StudentHealthProfile />
-
-          <div className="mt-4 text-sm text-gray-600">
-            Rows per page: 10 | 1–5 of 13
+        <main className="content-area flex-grow overflow-auto p-6">
+          <div className="w-full max-w-screen-xl mx-auto">
+            <StudentHealthProfile />
           </div>
         </main>
       </div>
