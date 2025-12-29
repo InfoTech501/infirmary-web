@@ -12,9 +12,9 @@ export function Sidebar() {
               <span>Dashboard</span>
           </Link>
           
-          <Link href='/health-profile' className="flex items-center space-x-3 size-full h-15 rounded-md px-4 py-2 text-gray-600 hover:bg-gray-200 active:bg-green-700 font-medium">
-              <UserCog2Icon className="w-5 h-5"/>
-              <span>Student Health Profile</span>  
+          <Link href='/student-health-profile' className="flex items-center space-x-3 size-full h-15 rounded-md px-4 py-2 text-gray-600 hover:bg-gray-200 active:bg-green-700 font-medium">
+              <UserCog2Icon className="w-5 h-5" />
+              <span>Student Health Profile</span>
           </Link>
 
           <Link href='/contacts' className="flex items-center space-x-3 size-full h-15 rounded-md px-4 py-2 text-gray-600 hover:bg-gray-200 active:bg-green-700 font-medium">
