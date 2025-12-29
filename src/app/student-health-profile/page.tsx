@@ -13,10 +13,8 @@ export default function Page() {
         <Sidebar />
 
         <main>
-          {/* Expanded Profile */}
           <StudentHealthProfile />
 
-          {/* Footer */}
           <div className="mt-4 text-sm text-gray-600">
             Rows per page: 10 | 1–5 of 13
           </div>

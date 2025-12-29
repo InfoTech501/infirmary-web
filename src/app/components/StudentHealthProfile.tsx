@@ -10,14 +10,12 @@ export function StudentHealthProfile() {
     <div className="mt-6 border rounded p-4 bg-white shadow">
       <h2 className="text-lg font-semibold mb-2">Student Profile</h2>
 
-      {/* Contact Info */}
       <div className="mb-4">
         <p><strong>Contact No.:</strong> 09123456789</p>
         <p><strong>Email Address:</strong> john.doe@email.com</p>
         <p><strong>Address:</strong> Silay City</p>
       </div>
 
-      {/* Health Problems */}
       <div className="mb-4">
         <p><strong>Health Problems:</strong></p>
         <ul className="list-disc list-inside">
@@ -26,7 +24,6 @@ export function StudentHealthProfile() {
         </ul>
       </div>
 
-      {/* Clinic History Table */}
       <div className="mb-4">
         <p><strong>Recent Clinic History:</strong></p>
         <table className="student-table w-full text-sm border">
@@ -61,7 +58,6 @@ export function StudentHealthProfile() {
         </table>
       </div>
 
-      {/* Action Buttons */}
       <div className="flex gap-4">
         <button className="button button-green">Give Feedback to Nurse</button>
         <button className="button button-blue" onClick={() => setShowModal(true)}>
@@ -69,7 +65,6 @@ export function StudentHealthProfile() {
         </button>
       </div>
 
-      {/* Modal */}
       {showModal && <ClinicVisitModal onClose={() => setShowModal(false)} />}
     </div>
   );
