@@ -1,29 +1,29 @@
-import React from 'react'
-import { StudentListTable } from '../../components/dashboard/StudentListTable'
-import { Header } from '../../components/Header'
-import { Sidebar } from '../../components/Sidebar'
-import { ChartNoAxesCombinedIcon } from 'lucide-react'
+import React from "react";
+import { StudentListTable } from "../../components/dashboard/StudentListTable";
+import { Header } from "../../components/Header";
+import { Sidebar } from "../../components/Sidebar";
+import MainLayout from "../../components/layout/MainLayout";
+import { ChartNoAxesCombinedIcon } from "lucide-react";
 
-const currentDate = new Date()
+const currentDate = new Date();
 
-const formattedDate = currentDate.toLocaleDateString('en-Ph', {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-})
+const formattedDate = currentDate.toLocaleDateString("en-Ph", {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
 
 const adviser = {
-  name: 'Mrs. Jean C. Dela Cruz',
+  name: "Mrs. Jean C. Dela Cruz",
   grade: 9,
-  section: 'Gumamela',
-}
+  section: "Gumamela",
+};
 
 export default function Dashboard() {
   return (
     <main>
-      <Header />
-      <Sidebar />
+      <MainLayout />
       <div className="pl-65 pt-20 px-6 py-8 flex flex-col">
         <div className="w-full flex justify-between items-start">
           <div className="max-w-3xl">
@@ -36,7 +36,7 @@ export default function Dashboard() {
             </h2>
 
             <p className="text-gray-950 text-sm mt-1">
-              Adviser of Grade {adviser.grade} {adviser.section}{' '}
+              Adviser of Grade {adviser.grade} {adviser.section}{" "}
             </p>
           </div>
 
@@ -73,5 +73,5 @@ export default function Dashboard() {
         </div>
       </div>
     </main>
-  )
+  );
 }

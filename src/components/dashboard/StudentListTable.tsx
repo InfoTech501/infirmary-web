@@ -1,44 +1,44 @@
-import React from 'react'
+import React from "react";
+
+const studentList = [
+  {
+    lrn: "0123456789112",
+    firstname: "John",
+    lastname: "Doe",
+    gradeandsection: "Grade 12 - Gumamela",
+    status: "Admitted",
+  },
+  {
+    lrn: "0987654321893",
+    firstname: "Mark",
+    lastname: "Heras",
+    gradeandsection: "Grade 12 - Gumamela",
+    status: "Not Admitted",
+  },
+  {
+    lrn: "086352789012",
+    firstname: "Janela",
+    lastname: "Salvador",
+    gradeandsection: "Grade 12 - Gumamela",
+    status: "Admitted",
+  },
+  {
+    lrn: "863725190463",
+    firstname: "Rita",
+    lastname: "Olivas",
+    gradeandsection: "Grade 12 - Gumamela",
+    status: "Not Admitted",
+  },
+  {
+    lrn: "562819075437",
+    firstname: "Bianca",
+    lastname: "Umali",
+    gradeandsection: "Grade 12 - Gumamela",
+    status: "Not Admitted",
+  },
+];
 
 export function StudentListTable() {
-  const studentList = [
-    {
-      lrn: '0123456789112',
-      firstname: 'John',
-      lastname: 'Doe',
-      gradeandsection: 'Grade 12 - Gumamela',
-      status: 'Admitted',
-    },
-    {
-      lrn: '0987654321893',
-      firstname: 'Mark',
-      lastname: 'Heras',
-      gradeandsection: 'Grade 12 - Gumamela',
-      status: 'Not Admitted',
-    },
-    {
-      lrn: '086352789012',
-      firstname: 'Janela',
-      lastname: 'Salvador',
-      gradeandsection: 'Grade 12 - Gumamela',
-      status: 'Admitted',
-    },
-    {
-      lrn: '863725190463',
-      firstname: 'Rita',
-      lastname: 'Olivas',
-      gradeandsection: 'Grade 12 - Gumamela',
-      status: 'Not Admitted',
-    },
-    {
-      lrn: '562819075437',
-      firstname: 'Bianca',
-      lastname: 'Umali',
-      gradeandsection: 'Grade 12 - Gumamela',
-      status: 'Not Admitted',
-    },
-  ]
-
   return (
     <div className="overflow-x-auto rounded-xl w-full">
       <table className="text-gray-950 w-full md:w-auto text-sm text-left">
@@ -64,5 +64,5 @@ export function StudentListTable() {
         </tbody>
       </table>
     </div>
-  )
+  );
 }
