@@ -1,10 +1,8 @@
-"use client";
-
-import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { StudentListTable } from "../components/StudentListTable";
-import { Header } from "../components/Header";
-import { Sidebar } from "../components/Sidebar";
+import React from "react";
+import { StudentListTable } from "../../components/dashboard/StudentListTable";
+import { Header } from "../../components/Header";
+import { Sidebar } from "../../components/Sidebar";
+import MainLayout from "../../components/layout/MainLayout";
 import { ChartNoAxesCombinedIcon } from "lucide-react";
 
 const currentDate = new Date();
@@ -22,28 +20,26 @@ const adviser = {
   section: "Gumamela",
 };
 
-export default function Home() {
-  const router = useRouter();
-
-  /* this is to be change after the integration of backend of Login */
-  useEffect(() => {
-    router.push("/dashboard");
-  }, [router]);
-
+export default function Dashboard() {
   return (
     <main>
-      <Sidebar />
-      <div className="main-content">
-        <Header />
-        <div className="flex justify-between items-center mt-4">
-          <div>
+      <MainLayout />
+      <div className="pl-65 pt-20 px-6 py-8 flex flex-col">
+        <div className="w-full flex justify-between items-start">
+          <div className="max-w-3xl">
+            <h2 className="text-gray-950 text-3xl font-semibold">
+              Welcome to TCSNHS Infirmary System!
+            </h2>
+
             <h2 className="text-gray-950 text-2xl font-semibold mt-2">
               {adviser.name}
             </h2>
+
             <p className="text-gray-950 text-sm mt-1">
-              Adviser of Grade {adviser.grade} {adviser.section}
+              Adviser of Grade {adviser.grade} {adviser.section}{" "}
             </p>
           </div>
+
           <div className="text-right pr-6">
             <p className="text-gray-950 text-lg font-normal">{formattedDate}</p>
           </div>
