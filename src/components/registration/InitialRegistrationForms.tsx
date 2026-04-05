@@ -1,12 +1,12 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import bg from '@/assets/tcsnhs-bg.png'
-import { EmployeeRegistrationRequest } from '@/interface/employee-registration'
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+import bg from "@/assets/tcsnhs-bg.png"
+import { EmployeeRegistrationRequest } from "@/interface/employee-registration"
 
 interface InitialRegistrationFormsProps {
-  forms: EmployeeRegistrationRequest['employee']
+  forms: EmployeeRegistrationRequest["employee"]
   onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void
   onNext: () => void
 }
@@ -16,17 +16,17 @@ export function InitialRegistrationForms({
   onChange,
   onNext,
 }: InitialRegistrationFormsProps) {
-  const [localError, setLocalError] = useState('')
+  const [localError, setLocalError] = useState("")
 
   const validateForm = () => {
-    if (!forms.employeeNumber.trim()) return 'Employee number is required'
-    if (!forms.dateEmployed) return 'Date employed is required'
-    if (!forms.person.firstName.trim()) return 'First name is required'
-    if (!forms.person.lastName.trim()) return 'Last name is required'
-    if (!forms.person.birthdate) return 'Birthdate is required'
-    if (!forms.person.gender) return 'Gender is required'
-    if (forms.person.age === '' || forms.person.age === null)
-      return 'Age is required'
+    if (!forms.employeeNumber.trim()) return "Employee number is required"
+    if (!forms.dateEmployed) return "Date employed is required"
+    if (!forms.person.firstName.trim()) return "First name is required"
+    if (!forms.person.lastName.trim()) return "Last name is required"
+    if (!forms.person.birthdate) return "Birthdate is required"
+    if (!forms.person.gender) return "Gender is required"
+    if (forms.person.age === "" || forms.person.age === null)
+      return "Age is required"
     return null
   }
 

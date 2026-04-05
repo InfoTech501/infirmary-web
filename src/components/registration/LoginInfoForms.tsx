@@ -1,11 +1,11 @@
-'use client'
+"use client"
 
-import bg from '@/assets/tcsnhs-bg.png'
-import { EmployeeRegistrationRequest } from '@/interface/employee-registration'
-import { useState } from 'react'
+import bg from "@/assets/tcsnhs-bg.png"
+import { EmployeeRegistrationRequest } from "@/interface/employee-registration"
+import { useState } from "react"
 
 interface LoginFormsProps {
-  forms: EmployeeRegistrationRequest['employee']
+  forms: EmployeeRegistrationRequest["employee"]
   confirmPassword: string
   onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void
   onRegister: () => void
@@ -21,14 +21,14 @@ export function LoginForms({
   isSubmitting,
   error,
 }: LoginFormsProps) {
-  const [localError, setLocalError] = useState('')
+  const [localError, setLocalError] = useState("")
 
   const validateForm = () => {
-    if (!forms.person.email.trim()) return 'Email is required'
-    if (!forms.user.username.trim()) return 'Username is required'
-    if (!forms.user.password) return 'Password is required'
-    if (!confirmPassword) return 'Confirm password is required'
-    if (forms.user.password !== confirmPassword) return 'Passwords do not match'
+    if (!forms.person.email.trim()) return "Email is required"
+    if (!forms.user.username.trim()) return "Username is required"
+    if (!forms.user.password) return "Password is required"
+    if (!confirmPassword) return "Confirm password is required"
+    if (forms.user.password !== confirmPassword) return "Passwords do not match"
     return null
   }
 
@@ -135,12 +135,12 @@ export function LoginForms({
               className={`w-30 h-11 text-white font-medium rounded-lg transition-colors
                       ${
                         isSubmitting
-                          ? 'bg-gray-400 cursor-not-allowed'
-                          : 'bg-emerald-500 hover:bg-emerald-600'
+                          ? "bg-gray-400 cursor-not-allowed"
+                          : "bg-emerald-500 hover:bg-emerald-600"
                       }
                     `}
             >
-              {isSubmitting ? 'Registering...' : 'Register'}
+              {isSubmitting ? "Registering..." : "Register"}
             </button>
           </div>
         </form>

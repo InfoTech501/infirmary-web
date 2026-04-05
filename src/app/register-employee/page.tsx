@@ -1,40 +1,40 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { EmployeeRegistrationRequest } from '@/interface/employee-registration'
-import { register } from '@/services/employee-registration'
-import { InitialRegistrationForms } from '@/components/registration/InitialRegistrationForms'
-import { LoginForms } from '@/components/registration/LoginInfoForms'
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { EmployeeRegistrationRequest } from "@/interface/employee-registration"
+import { register } from "@/services/employee-registration"
+import { InitialRegistrationForms } from "@/components/registration/InitialRegistrationForms"
+import { LoginForms } from "@/components/registration/LoginInfoForms"
 
 export default function Registration() {
   const [form, setForm] = useState<
     EmployeeRegistrationRequest & { confirmPassword: string }
   >({
     employee: {
-      employeeNumber: '',
-      dateEmployed: '',
-      employmentStatus: 'active',
+      employeeNumber: "",
+      dateEmployed: "",
+      employmentStatus: "active",
       person: {
-        firstName: '',
-        middleName: '',
-        lastName: '',
-        birthdate: '',
-        gender: '',
-        age: '',
-        email: '',
+        firstName: "",
+        middleName: "",
+        lastName: "",
+        birthdate: "",
+        gender: "",
+        age: "",
+        email: "",
       },
       user: {
-        username: '',
-        password: '',
+        username: "",
+        password: "",
       },
       department: {
-        departmentName: 'Senior High School Department',
+        departmentName: "Senior High School Department",
       },
     },
-    confirmPassword: '',
+    confirmPassword: "",
   })
-  const [error, setError] = useState('')
+  const [error, setError] = useState("")
   const router = useRouter()
   const [showSuccess, setShowSuccess] = useState(false)
   const [showFailed, setShowFailed] = useState(false)
@@ -46,14 +46,14 @@ export default function Registration() {
   ) => {
     const { name, value, type } = e.target
     setForm((prev) => {
-      if (name === 'confirmPassword') {
+      if (name === "confirmPassword") {
         return {
           ...prev,
           confirmPassword: value,
         }
       }
 
-      const keys = ['employee', ...name.split('.')]
+      const keys = ["employee", ...name.split(".")]
       let updated: any = { ...prev }
       let obj = updated
 
@@ -63,7 +63,7 @@ export default function Registration() {
       }
 
       obj[keys[keys.length - 1]] =
-        type === 'number' ? (value === '' ? '' : Number(value)) : value
+        type === "number" ? (value === "" ? "" : Number(value)) : value
 
       return updated
     })
@@ -71,7 +71,7 @@ export default function Registration() {
 
   const handleRegistration = async () => {
     if (isSubmitting) return
-    setError('')
+    setError("")
     setIsSubmitting(true)
 
     try {
@@ -80,34 +80,34 @@ export default function Registration() {
 
       setForm({
         employee: {
-          employeeNumber: '',
-          dateEmployed: '',
-          employmentStatus: 'active',
+          employeeNumber: "",
+          dateEmployed: "",
+          employmentStatus: "active",
           person: {
-            firstName: '',
-            middleName: '',
-            lastName: '',
-            birthdate: '',
-            gender: '',
-            age: '',
-            email: '',
+            firstName: "",
+            middleName: "",
+            lastName: "",
+            birthdate: "",
+            gender: "",
+            age: "",
+            email: "",
           },
           user: {
-            username: '',
-            password: '',
+            username: "",
+            password: "",
           },
           department: {
-            departmentName: 'Senior High School Department',
+            departmentName: "Senior High School Department",
           },
         },
-        confirmPassword: '',
+        confirmPassword: "",
       })
 
       setShowSuccess(true)
-      console.log('Registered successfully')
+      console.log("Registered successfully")
     } catch (error) {
       const message =
-        error instanceof Error ? error.message : 'Failed to register'
+        error instanceof Error ? error.message : "Failed to register"
       setError(message)
       setShowFailed(true)
       console.error(message)
@@ -153,7 +153,7 @@ export default function Registration() {
               <button
                 onClick={() => {
                   setShowSuccess(false)
-                  router.push('/login')
+                  router.push("/login")
                 }}
                 className="px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700"
               >
@@ -171,9 +171,7 @@ export default function Registration() {
               Registration Failed
             </h2>
 
-            <p className="text-gray-600 mb-6">
-              { error }
-            </p>
+            <p className="text-gray-600 mb-6">{error}</p>
 
             <div className="flex justify-end">
               <button

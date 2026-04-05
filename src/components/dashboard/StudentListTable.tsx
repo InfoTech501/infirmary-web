@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const studentList = [
   {
@@ -36,7 +36,7 @@ const studentList = [
     gradeandsection: "Grade 12 - Gumamela",
     status: "Not Admitted",
   },
-];
+]
 
 export function StudentListTable() {
   return (
@@ -64,5 +64,5 @@ export function StudentListTable() {
         </tbody>
       </table>
     </div>
-  );
+  )
 }

@@ -2,14 +2,14 @@ export interface EmployeeRegistrationRequest {
   employee: {
     employeeNumber: string
     dateEmployed: string
-    employmentStatus: 'active'
+    employmentStatus: "active"
     person: {
       firstName: string
       middleName: string
       lastName: string
       birthdate: string
       gender: string
-      age: number | ''
+      age: number | ""
       email: string
     }
     user: {
@@ -17,7 +17,7 @@ export interface EmployeeRegistrationRequest {
       password: string
     }
     department: {
-      departmentName: 'Senior High School Department'
+      departmentName: "Senior High School Department"
     }
   }
 }
@@ -30,7 +30,7 @@ export interface EmployeeRegistrationResponse {
     id: number
     employeeNumber: number
     dateEmployed: string
-    employmentStatus: 'active'
+    employmentStatus: "active"
     person: {
       id: number
       firstName: string
@@ -50,14 +50,14 @@ export interface EmployeeRegistrationResponse {
       password: string
       lastLoginDate: string | null
       joinDate: string
-      role: 'TEACHER_ROLE'
-      authorities: ['user:read', 'user:update']
-      active: 'true'
-      locked: 'false'
+      role: "TEACHER_ROLE"
+      authorities: ["user:read", "user:update"]
+      active: "true"
+      locked: "false"
     } | null
     department: {
       id: number
-      departmentName: 'Senior High School Department'
+      departmentName: "Senior High School Department"
     }
   } | null
 }
