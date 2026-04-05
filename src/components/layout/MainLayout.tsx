@@ -1,6 +1,6 @@
-import React from "react";
-import { Header } from "../Header";
-import { Sidebar } from "../Sidebar";
+import React from "react"
+import { Header } from "../Header"
+import { Sidebar } from "../Sidebar"
 
 export default function MainLayout() {
   return (
@@ -8,5 +8,5 @@ export default function MainLayout() {
       <Header />
       <Sidebar />
     </main>
-  );
+  )
 }

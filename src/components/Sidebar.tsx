@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import { PieChart, UserCog2Icon, LucideBellRing } from "lucide-react";
+import React from "react"
+import Link from "next/link"
+import { PieChart, UserCog2Icon, LucideBellRing } from "lucide-react"
 
 export function Sidebar() {
   return (
@@ -33,5 +33,5 @@ export function Sidebar() {
         </nav>
       </aside>
     </div>
-  );
+  )
 }

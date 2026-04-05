@@ -9,4 +9,4 @@ export default {
     random: true,
     forbidDuplicateNames: true,
   },
-};
+}
