@@ -172,9 +172,7 @@ export default function Registration() {
             </h2>
 
             <p className="text-gray-600 mb-6">
-              {'Your have failed the registration.' +
-                error +
-                'Register again and make sure all credentials are new and correct.'}
+              { error }
             </p>
 
             <div className="flex justify-end">

@@ -127,7 +127,7 @@ export function LoginForms({
           </div>
 
           {/* Button */}
-          <div className="flex justify-end">
+          <div className="flex justify-end pt-5">
             <button
               type="button"
               onClick={handleRegistration}
