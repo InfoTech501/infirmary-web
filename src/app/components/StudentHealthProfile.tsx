@@ -6,7 +6,20 @@ import { ClinicVisitModal } from "@/app/components/modal/ClinicVisitModal";
 
 export function StudentHealthProfile() {
   const [showModal, setShowModal] = useState(false);
-
+  const informations = [
+    { 
+      lrn: "10819267", 
+      firstName: "Danica", 
+      lastName: "Pandan", 
+      gradeandsection: "Grade 12 - Gumamela" 
+    },
+    { 
+      lrn: "10819268", 
+      firstName: "Cassy", 
+      lastName: "Yvanes", 
+      gradeandsection: "Grade 12 - Gumamela" 
+    }
+  ]
   return (
     <div className="w-full overflow-x-auto">
         <div className="flex items-center justify-between mb-15">   
