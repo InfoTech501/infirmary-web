@@ -37,7 +37,15 @@ export function StudentHealthProfile() {
         </thead>
 
         <tbody className="text-gray-700">
-          <tr className="main-row cursor-default border-b border-gray-200">
+          {informations.map((students) => (
+                <tr key={students.lrn} className="main-row cursor-default border-b border-gray-200">
+                  <td className="expand-icon text-center w-8 px-2 py-3 select-none"><ChevronDown /></td>
+                  <td className="px-3 py-3">{students.lrn}</td>
+                  <td className="px-3 py-3">{students.firstName}</td>
+                  <td className="px-3 py-3">{students.lastName}</td>
+                  <td className="px-3 py-3">{students.gradeandsection}</td>                
+                </tr>
+              ))}
             <td className="expand-icon text-center w-8 px-2 py-3 select-none">&#x25BC;</td>
             <td className="px-3 py-3">Cell</td>
             <td className="px-3 py-3">Cell</td>
