@@ -1,24 +1,24 @@
-import React from "react";
-import { StudentListTable } from "../../components/dashboard/StudentListTable";
-import { Header } from "../../components/Header";
-import { Sidebar } from "../../components/Sidebar";
-import MainLayout from "../../components/layout/MainLayout";
-import { ChartNoAxesCombinedIcon } from "lucide-react";
+import React from "react"
+import { StudentListTable } from "../../components/dashboard/StudentListTable"
+import { Header } from "../../components/Header"
+import { Sidebar } from "../../components/Sidebar"
+import MainLayout from "../../components/layout/MainLayout"
+import { ChartNoAxesCombinedIcon } from "lucide-react"
 
-const currentDate = new Date();
+const currentDate = new Date()
 
 const formattedDate = currentDate.toLocaleDateString("en-Ph", {
   weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
-});
+})
 
 const adviser = {
   name: "Mrs. Jean C. Dela Cruz",
   grade: 9,
   section: "Gumamela",
-};
+}
 
 export default function Dashboard() {
   return (
@@ -73,5 +73,5 @@ export default function Dashboard() {
         </div>
       </div>
     </main>
-  );
+  )
 }

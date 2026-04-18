@@ -1,8 +1,8 @@
-import React from "react";
-import { Bell, UserCircle2Icon } from "lucide-react";
-import Link from "next/link";
+import React from "react"
+import { Bell, UserCircle2Icon } from "lucide-react"
+import Link from "next/link"
 
-const adviserName = "Mrs. Jean C. Dela Cruz";
+const adviserName = "Mrs. Jean C. Dela Cruz"
 
 export function Header() {
   return (
@@ -28,5 +28,5 @@ export function Header() {
         </Link>
       </div>
     </nav>
-  );
+  )
 }

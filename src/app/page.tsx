@@ -1,81 +1,14 @@
-"use client";
+"use client"
 
-import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { StudentListTable } from "../components/StudentListTable";
-import { Header } from "../components/Header";
-import { Sidebar } from "../components/Sidebar";
-import { ChartNoAxesCombinedIcon } from "lucide-react";
-
-const currentDate = new Date();
-
-const formattedDate = currentDate.toLocaleDateString("en-Ph", {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-});
-
-const adviser = {
-  name: "Mrs. Jean C. Dela Cruz",
-  grade: 9,
-  section: "Gumamela",
-};
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
 
 export default function Home() {
-  const router = useRouter();
+  const router = useRouter()
 
   /* this is to be change after the integration of backend of Login */
   useEffect(() => {
-    router.push("/dashboard");
-  }, [router]);
-
-  return (
-    <main>
-      <Sidebar />
-      <div className="main-content">
-        <Header />
-        <div className="flex justify-between items-center mt-4">
-          <div>
-            <h2 className="text-gray-950 text-2xl font-semibold mt-2">
-              {adviser.name}
-            </h2>
-            <p className="text-gray-950 text-sm mt-1">
-              Adviser of Grade {adviser.grade} {adviser.section}
-            </p>
-          </div>
-          <div className="text-right pr-6">
-            <p className="text-gray-950 text-lg font-normal">{formattedDate}</p>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-8 mt-8">
-          <section className="summary-report flex-1 pb-4">
-            <h3 className="text-gray-950 font-semibold mb-3">
-              Today's Summary Report
-            </h3>
-
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="flex items-center justify-between bg-green-100 p-4 rounded-xl">
-                <div>
-                  <p className="text-2xl font-bold p-1">#</p>
-                  <p className="text-sm text-gray-600 pl-1 pt-1 pb-2 pr-3.5">
-                    Clinic Visitors from this section
-                  </p>
-                </div>
-                <ChartNoAxesCombinedIcon size={35} />
-              </div>
-            </div>
-          </section>
-
-          <section className="class-table-lists flex-1">
-            <h3 className="text-gray-950 font-semibold mb-3">
-              List of students
-            </h3>
-            <StudentListTable />
-          </section>
-        </div>
-      </div>
-    </main>
-  );
+    router.push("/dashboard")
+  }, [router])
+  return null
 }
