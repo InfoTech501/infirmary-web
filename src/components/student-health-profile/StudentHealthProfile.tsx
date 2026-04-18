@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import "@/app/styles/student.health.profile.css";
-import { ClinicVisitModal } from "@/app/components/modal/ClinicVisitModal";
+import { ChevronDown } from "lucide-react";
 
 export function StudentHealthProfile() {
   const [showModal, setShowModal] = useState(false);
@@ -22,10 +21,9 @@ export function StudentHealthProfile() {
   ]
   return (
     <div className="w-full overflow-x-auto">
-        <div className="flex items-center justify-between mb-15">   
-        {/* This is for the Search Field and Filters Buttons along with the othr button */}
-        </div>
-      <table className="students-table min-w-full">
+      <div className="flex items-center justify-between mb-15">   
+      </div>
+      <table className="w-full border-collapse rounded-lg shadow-sm border border-gray-300">
         <thead>
           <tr className="border-b border-gray-300 text-left text-gray-600 font-semibold">
             <th className="w-8"></th>
@@ -38,7 +36,7 @@ export function StudentHealthProfile() {
 
         <tbody className="text-gray-700">
           {informations.map((students) => (
-                <tr key={students.lrn} className="main-row cursor-default border-b border-gray-200">
+                <tr key={students.lrn} className="bg-white transition-colors duration-150 hover:bg-gray-50 cursor-default border-b border-gray-200">
                   <td className="expand-icon text-center w-8 px-2 py-3 select-none"><ChevronDown /></td>
                   <td className="px-3 py-3">{students.lrn}</td>
                   <td className="px-3 py-3">{students.firstName}</td>
@@ -46,14 +44,8 @@ export function StudentHealthProfile() {
                   <td className="px-3 py-3">{students.gradeandsection}</td>                
                 </tr>
               ))}
-            <td className="expand-icon text-center w-8 px-2 py-3 select-none">&#x25BC;</td>
-            <td className="px-3 py-3">Cell</td>
-            <td className="px-3 py-3">Cell</td>
-            <td className="px-3 py-3">Cell</td>
-            <td className="px-3 py-3">Cell</td>
-          </tr>
 
-          <tr className="main-row expanded-row-bg cursor-default border-b border-gray-200">
+          <tr className="bg-gray-100 cursor-default border-b border-gray-200">
             <td className="expand-icon text-center w-8 px-2 py-3 select-none">&#x25B2;</td>
             <td className="px-3 py-3">Cell</td>
             <td className="px-3 py-3">Cell</td>
@@ -61,8 +53,8 @@ export function StudentHealthProfile() {
             <td className="px-3 py-3">Cell</td>
           </tr>
 
-          <tr className="expanded-row bg-gray-100">
-            <td colSpan={5} className="p-6">
+          <tr className="bg-gray-100">
+            <td colSpan={5} className="p-6 border-b border-gray-300">
                 <div className="expanded-content flex flex-col md:flex-row md:gap-5">
                 <div className="info-section text-gray-700 mb-6 md:mb-0 md:w-[16%] min-w-0">
                     <strong>Contact Info</strong>
@@ -82,7 +74,7 @@ export function StudentHealthProfile() {
 
                 <div className="info-section clinic-history text-gray-700 md:w-[45%] min-w-0">
                     <strong>Recent Clinic History</strong>
-                    <table className="clinic-history-table w-full border border-gray-300 rounded-md overflow-hidden text-sm">
+                    <table className="w-full border border-gray-300 rounded-lg overflow-hidden text-sm">
                     <thead className="bg-gray-200 text-left text-gray-700 font-semibold">
                         <tr>
                         <th className="py-1 px-1 border-b border-gray-300">Illness</th>
@@ -113,9 +105,9 @@ export function StudentHealthProfile() {
                     </tbody>
                     </table>
                     <div className="mt-4 flex flex-wrap gap-4 justify-end">
-                    <button className="button outline-btn">Give Feedback to nurse</button>
+                    <button className="px-5 py-2 font-semibold cursor-pointer rounded-lg transition-colors border border-gray-700 text-gray-700 bg-white hover:bg-gray-700 hover:text-white select-none">Give Feedback to nurse</button>
                     <button
-                        className="button filled-btn"
+                        className="px-5 py-2 font-semibold cursor-pointer rounded-lg transition-colors border border-gray-700 text-gray-700 bg-white hover:bg-gray-700 hover:text-white select-none"
                         onClick={() => setShowModal(true)}
                         type="button"
                     >
@@ -127,21 +119,21 @@ export function StudentHealthProfile() {
             </td>
             </tr>
 
-          <tr className="main-row cursor-default border-b border-gray-200">
+          <tr className="bg-white transition-colors duration-150 hover:bg-gray-50 cursor-default border-b border-gray-200">
             <td className="expand-icon text-center w-8 px-2 py-3 select-none">&#x25BC;</td>
             <td className="px-3 py-3">Cell</td>
             <td className="px-3 py-3">Cell</td>
             <td className="px-3 py-3">Cell</td>
             <td className="px-3 py-3">Cell</td>
           </tr>
-          <tr className="main-row cursor-default border-b border-gray-200">
+          <tr className="bg-white transition-colors duration-150 hover:bg-gray-50 cursor-default border-b border-gray-200">
             <td className="expand-icon text-center w-8 px-2 py-3 select-none">&#x25BC;</td>
             <td className="px-3 py-3">Cell</td>
             <td className="px-3 py-3">Cell</td>
             <td className="px-3 py-3">Cell</td>
             <td className="px-3 py-3">Cell</td>
           </tr>
-          <tr className="main-row cursor-default border-b border-gray-200">
+          <tr className="bg-white transition-colors duration-150 hover:bg-gray-50 cursor-default border-b border-gray-200">
             <td className="expand-icon text-center w-8 px-2 py-3 select-none">&#x25BC;</td>
             <td className="px-3 py-3">Cell</td>
             <td className="px-3 py-3">Cell</td>
@@ -169,8 +161,7 @@ export function StudentHealthProfile() {
           &gt;
         </button>
       </div>
-
-      {showModal && <ClinicVisitModal onClose={() => setShowModal(false)} />}
     </div>
+
   );
 }

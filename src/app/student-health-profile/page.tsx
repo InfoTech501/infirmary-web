@@ -1,12 +1,12 @@
 import React from "react";
-import { Sidebar } from "@/app/components/Sidebar";
-import { StudentHealthProfileHeader } from "@/app/components/StudentHealthProfileHeader";
-import { StudentHealthProfile } from "@/app/components/StudentHealthProfile";
+import { Sidebar } from "@/components/Sidebar";
+import { Header } from "@/components/Header";
+import { StudentHealthProfile } from "@/components/student-health-profile/StudentHealthProfile";
 
 export default function Page() {
   return (
     <>
-      <StudentHealthProfileHeader />
+      <Header />
 
       <div className="layout-container bg-white-50 min-h-screen flex">
         <Sidebar />
