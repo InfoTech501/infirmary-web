@@ -1,6 +1,6 @@
 "use client"
 
-import bg from "@/assets/tcsnhs-bg.png"
+import bg from "@/assets/login-bg.svg"
 import { EmployeeRegistrationRequest } from "@/interface/employee-registration"
 import { useState } from "react"
 
