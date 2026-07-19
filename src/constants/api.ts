@@ -6,6 +6,11 @@ export const BASE_URL = "http://localhost:8080"
 export const REGISTER_EMPLOYEE = `${BASE_URL}/user/register`
 
 /**
+ * constant login endpoint
+ */
+export const LOGIN_EMPLOYEE = `${BASE_URL}/user/login`
+
+/**
  * constant current user endpoint
  */
 export const EMPLOYEE_CURRENT_USER = `${BASE_URL}/user/current-user`
